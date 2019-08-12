@@ -5,6 +5,10 @@
 #page-header p {
     margin-bottom: 3%;
 }
+div#media {
+    width: 100%;
+    display: inline-block;
+}
 div#tidegaugesgallery {
     width: 15%;
     float: left;
