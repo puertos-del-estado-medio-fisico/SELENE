@@ -22,16 +22,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
     <link rel="stylesheet" href="/SELENE/assets/css/style.css?v=3b0e289f72ac521d80d7fd6fce0c2564091ffd58">
+    <link rel="stylesheet" href="/SELENE/assets/css/flexslider.css">
   </head>
   <body>
     <section class="page-header">
       <h1 class="project-name">SELENE</h1>
       <h2 class="project-tagline"> SEa LEvel NEar-real time quality control processing</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>Nowadays, coastal sea level monitoring and forecasting systems require high-quality tide gauge data in near-real time, with lower samplings and latencies than a few years ago. SELENE software has been developed to minimize the effects of bad data or malfunctions of the sensors on the use of these data and to automatically consolidate flags in a quality controlled time series, minimizing the need of human inspection in near-real time. The software is running operationally at the REDMAR network of Puertos del Estado and, since last January, at the IBI In Situ TAC of the Copernicus Marine Service. Description of the code and use cases are provided here, along with access to the Github created for facilitating control of versions and contributions from other experts/institutions</p>
       <a href="https://github.com/puertos-del-estado-medio-fisico/SELENE" class="btn">Software on GitHub</a>
       <a href="https://github.com/puertos-del-estado-medio-fisico/SELENE/blob/master/documentation/SELENE_DesignAndUsersGuide.pdf" class="btn">Documentation</a>
     </section>
     <section class="main-content">
+      <div id="media">
+        <div id="tidegaugesgallery">
+           <div class="flexslider">
+              <ul class="slides">
+                  <li><img src="http://lira.puertos.es:8000/static/temp/tidegauges/20170616_142836%20[Desktop%20Resolution].jpg"/></li>
+                  <li><img src="http://lira.puertos.es:8000/static/temp/tidegauges/Almeria_ord_2091006.JPG"/></li>
+              </ul>
+          </div>
+        </div>
+        <div id="tidegaugesmap">
+          <img src="http://lira.puertos.es:8000/static/temp/mapcmemstidegauges.jpg"/>
+        </div>
+      </div>
+      <div id="moreinfo">
+        <div id="quickstart"></div>
+        <div id="usecases"></div>
+      </div>
     </section>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+	<script src="/SELENE/assets/js/flexslider/jquery.flexslider-min.js"></script>
+	<script src="/SELENE/assets/js/app.js"></script>
   </body>
 </html>
