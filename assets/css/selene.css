@@ -1,0 +1,22 @@
+@media screen and (min-width: 64em)
+.main-content {
+    max-width: 90%;
+}
+#page-header p {
+    margin-bottom: 3%;
+}
+div#tidegaugesgallery {
+    width: 15%;
+    float: left;
+    margin-left: 10%;
+}
+div#tidegaugesmap {
+    width: 57%;
+    float: left;
+    padding: 4px;
+    margin-left: 5%;
+}
+div#tidegaugesmap img {
+    clip-path: inset(220px 0px 75px 0px);
+    margin-top: -220px;
+}
