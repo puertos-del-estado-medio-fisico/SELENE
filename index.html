@@ -32,7 +32,7 @@
       <a href="https://github.com/puertos-del-estado-medio-fisico/SELENE" class="btn">Software on GitHub</a>
       <a href="https://github.com/puertos-del-estado-medio-fisico/SELENE/blob/master/documentation/SELENE_DesignAndUsersGuide.pdf" class="btn">Documentation</a>
     </section>
-    <section class="main-content">
+    <section class="main-content" style="width:90%">
       <div id="media">
         <div id="tidegaugesgallery">
            <div class="flexslider">
@@ -54,9 +54,17 @@
         <div id="quickstart">
 	   <h2>Quick start</h2>
 	   <ol>
-	      <li>Download...</li>
-	      <li>Blabla</li>
-	      <li>Bleble</li>
+	      <li>Prepare the environment: Python 3.6.x + Anaconda 3</li>
+	      <li>Install libraries: pandas, scipy, numpy, configparser</li>
+	      <li>Get the gfortran compiler</li>
+          <li>Download SELENE to your file system</li>
+          <li>Go to <SELENE_PATH>/SELENE/foreman and compile predicc.f with gfortran and options -fno-automatic, -ffixed-line-lenght-132 and -O2</li>
+          <li>Give execution permissions to predicc.e</li>
+          <li>Edit <SELENE_PATH>/SELENE/configuration/config.ini to indicate where is foreman and outputs folder</li>
+          <li>Edit <SELENE_PATH>/SELENE/configuration/stations.json to add stations and related parameters</li>
+          <li>Copy sea level time series files to data files folder (these files are configured in stations.json)</li>
+          <li>Run: python selene.py <station_id></li>
+          <li>View results: python selenevis.py -station <station_id></li>
 	   </ol>
 	</div>
         <div id="usecases">
