@@ -79,6 +79,10 @@ div#usecases p {
     font-style: italic;
     text-align: center;
 }
+div#usecases img {
+    display: block;
+    margin: 0 auto;
+}
 .flexslider {
     border: none;
 }
@@ -100,4 +104,7 @@ div#usecases p {
 }
 .code span {
     font-family: "Courier New",Courier,"Lucida Sans Typewriter","Lucida Typewriter",monospace;
+}
+.python span {
+    color: purple
 }
