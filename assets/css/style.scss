@@ -2,8 +2,9 @@
 ---
 
 @import "{{ site.theme }}";
+
 body {
-    font-family: Trebuchet MS,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Tahoma,sans-serif;
+    font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif;
 }
 .main-content {
     max-width: 100%;
