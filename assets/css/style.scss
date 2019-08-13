@@ -10,11 +10,29 @@ body {
     max-width: 100%;
     padding: 1em 0;
 }
+.main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6 {
+    color: #2c1959;
+}
+.project-tagline {
+    font-size: 1.25rem;
+    font-weight: 600;
+    font-style: italic;
+}
 .page-header {
     background-image: url(/SELENE/images/seawaterfooter3.jpg);
 }
 .page-header p {
     margin-bottom: 3%;
+}
+div#logopuertos {
+    float: right;
+    position: absolute;
+    top: 2em;
+    right: 2em;
+    width: 30%;
+}
+div#logopuertos img {
+    width: 100%;
 }
 .page-footer {
     background-image: url(/SELENE/images/seawaterfooter3.jpg);
