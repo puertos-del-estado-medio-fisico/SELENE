@@ -152,3 +152,38 @@ div#usecases img {
        font-size: 1em;
     }
 }
+@media only screen and (max-width: 450px) {
+    body {
+        font-size: 0.8em;
+    }
+    .project-tagline {
+        font-size: 1rem;
+    }
+    div#logopuertos {
+        top: 0.5em;
+        right: 0.5em;
+    }
+    div#media {
+        width: 100%;
+        display: inline-block;
+        padding-left: 1em;
+    }
+    div#tidegaugesgallery {
+        width: 95%;
+    }
+    .tidegaugesmap {
+        width: 95%;
+    }
+    div#moreinfo {
+        padding: 0;
+    }
+    div#quickstart {
+        width: 100%;
+    }
+    div#usecases {
+        width: 100%;
+    }
+    .quickstartinfostep {
+       font-size: 1em;
+    }
+}
