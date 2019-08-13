@@ -87,9 +87,17 @@ div#usecases p {
 }
 .quickstartinfostep {
     margin: 1.5em 0.5em;
-    padding: 0.5em;
+    padding: 1.5em;
     border-radius: 5px;
     border-color: 2c1959;
     border: 1px solid #2c1959;
     background-color: rgba(17,10,35,0.1);
+}
+.quickstartinfostep img {
+    max-width: 7em;
+    max-height: 2em;
+    margin-left: 1em;
+}
+.code span {
+    font-family: "Courier New",Courier,"Lucida Sans Typewriter","Lucida Typewriter",monospace;
 }
