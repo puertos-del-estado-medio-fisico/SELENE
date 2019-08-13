@@ -2,21 +2,36 @@
 ---
 
 @import "{{ site.theme }}";
+body {
+    font-family: Trebuchet MS,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Tahoma,sans-serif;
+}
 .main-content {
-    max-width: 90%;
+    max-width: 100%;
+    padding: 1em 0;
 }
 .page-header {
-    background-image: url(/SELENE/images/seawaterfooter3.jpg);
-}
-.page-footer {
     background-image: url(/SELENE/images/seawaterfooter3.jpg);
 }
 .page-header p {
     margin-bottom: 3%;
 }
+.page-footer {
+    background-image: url(/SELENE/images/seawaterfooter3.jpg);
+    height: 5em;
+    width: 100%;
+    display: inline-flex;
+}
+.page-footer p {
+    font-size: 1.2em;
+    line-height: 2em;
+    text-align: right;
+    width: 100%;
+    margin-right: 1em;
+}
 div#media {
     width: 100%;
     display: inline-block;
+    padding-left: 1em;
 }
 div#tidegaugesgallery {
     width: 33%;
@@ -26,9 +41,9 @@ div#tidegaugesgallery {
     width: 33%;
     float: left;
 }
-div#tidegaugesmap img {
-    clip-path: inset(220px 0px 75px 0px);
-    margin-top: -220px;
+div#moreinfo {
+    padding: 0 3em;
+    display: inline-block;
 }
 div#quickstart {
     width: 50%;
@@ -37,4 +52,13 @@ div#quickstart {
 div#usecases {
     width: 50%;
     float: left;
+}
+div#usecases p {
+    margin: -1em 2em;
+    font-size: small;
+    font-style: italic;
+    text-align: center;
+}
+.flexslider {
+    border: none;
 }
