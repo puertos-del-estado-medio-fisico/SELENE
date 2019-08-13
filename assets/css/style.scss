@@ -5,7 +5,13 @@
 .main-content {
     max-width: 90%;
 }
-#page-header p {
+.page-header {
+    background-image: url(/SELENE/images/seawaterfooter3.jpg);
+}
+.page-footer {
+    background-image: url(/SELENE/images/seawaterfooter3.jpg);
+}
+.page-header p {
     margin-bottom: 3%;
 }
 div#media {
@@ -13,15 +19,12 @@ div#media {
     display: inline-block;
 }
 div#tidegaugesgallery {
-    width: 15%;
+    width: 33%;
     float: left;
-    margin-left: 10%;
 }
-div#tidegaugesmap {
-    width: 57%;
+.tidegaugesmap {
+    width: 33%;
     float: left;
-    padding: 4px;
-    margin-left: 5%;
 }
 div#tidegaugesmap img {
     clip-path: inset(220px 0px 75px 0px);
