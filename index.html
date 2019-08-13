@@ -57,34 +57,90 @@
         </div>
       </div>
       <div id="moreinfo">
-        <div id="quickstart">
+       <div id="quickstart">
 	   <h2>Quick start</h2>
 	   <ol>
-	      <li>Prepare the environment:
+	      <li>
+            <span class="quickstarttitlestep">Prepare the environment:</span>
             <div class="quickstartinfostep">
               <ul>
                 <li>Python 3.6.x</li>
-                <li>Anaconda 3</li>
+                <li>Anaconda 3 <a href="https://www.anaconda.com/distribution/#download-section" target="_blank"><img alt="ANACONDA-download" src="https://www.anaconda.com/wp-content/uploads/2018/06/cropped-Anaconda_horizontal_RGB-1-600x102.png" /></a></li>
               </ul>
             </div>
           </li>
-	      <li>Install libraries: pandas, scipy, numpy, configparser</li>
-	      <li>Get the gfortran compiler</li>
-          <li>Download SELENE to your file system</li>
-          <li>Go to <SELENE_PATH>/SELENE/foreman and compile predicc.f with gfortran and options -fno-automatic, -ffixed-line-lenght-132 and -O2</li>
-          <li>Give execution permissions to predicc.e</li>
-          <li>Edit <SELENE_PATH>/SELENE/configuration/config.ini to indicate where is foreman and outputs folder</li>
-          <li>Edit <SELENE_PATH>/SELENE/configuration/stations.json to add stations and related parameters</li>
-          <li>Copy sea level time series files to data files folder (these files are configured in stations.json)</li>
-          <li>Run: python selene.py <station_id></li>
-          <li>View results: python selenevis.py -station <station_id></li>
-	   </ol>
-	</div>
-        <div id="usecases">
+	      <li>
+            <span class="quickstarttitlestep">Install libraries (if not installed):</span>
+            <div class="quickstartinfostep">
+              <ul>
+                <li>pandas</li>
+                <li>scipy</li>
+                <li>numpy</li>
+                <li>configparser</li>
+              </ul>
+            </div>
+          </li>
+	      <li>
+            <span class="quickstarttitlestep">Get the gfortran compiler:</span>
+            <div class="quickstartinfostep">
+              GFORTRAN <a href="https://gcc.gnu.org/wiki/GFortran" target="_blank"><img alt="GFORTRAN" src="https://gcc.gnu.org/img/gccegg-65.png"/></a>
+            </div>
+          </li>
+          <li>
+            <span class="quickstarttitlestep">Download SELENE to your file system:</span>
+            <div class="quickstartinfostep">
+              SELENE <a href="https://github.com/puertos-del-estado-medio-fisico/SELENE" target="_blank"><img alt="SELENE Software" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/GitHub_logo_2013.svg/245px-GitHub_logo_2013.svg.png"/></a>
+            </div>
+          </li>
+          <li>
+            <span class="quickstarttitlestep">Prepare FORTRAN foreman script:</span>
+            <div class="quickstartinfostep">
+              <ul>
+                <li>Go to /SELENE/foreman and compile predicc.f with gfortran and options -fno-automatic, -ffixed-line-lenght-132 and -O2</li>
+                <li>Give execution permissions to predicc.e</li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <span class="quickstarttitlestep">Configure SELENE:</span>
+            <div class="quickstartinfostep">
+              <ul>
+                <li>Edit /SELENE/configuration/config.ini to indicate where is foreman and outputs folder</li>
+                <li>Edit /SELENE/configuration/stations.json to add stations and related parameters</li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <span class="quickstarttitlestep">Prepare original sea level data series:</span>
+            <div class="quickstartinfostep">
+              Copy sea level time series files to data files folder (these files are configured in stations.json)
+            </div>
+          </li>
+          <li>
+            <span class="quickstarttitlestep">Run SELENE:</span>
+            <div class="quickstartinfostep">
+              python selene.py [station_id]
+            </div>
+          </li>
+          <li>
+            <span class="quickstarttitlestep">Run SELENE:</span>
+            <div class="quickstartinfostep">
+              python selene.py [station_id]
+            </div>
+          </li>
+          <li>
+            <span class="quickstarttitlestep">Visualize results with SELENE:</li>
+            <div class="quickstartinfostep">
+              python selenevis.py -station [station_id]
+            </div>
+          </li>
+ 	   </ol>
+	  </div>
+      <div id="usecases">
 	   <img src="/SELENE/images/usecases/SELENE_Melilla.jpeg"/>
 	   <p>Display of the output files of SELENE software applied to Melilla Tide Gauge (REDMAR network) data in July 2018: top: original data (1-min) with QC flags  (in red the bad data detected by the software); center: two by-products generated by SELENE: 5-min interpolated time series and hourly values (orange); bottom: final by-product generated if harmonic constants are available, the hourly residual for the analyzed period</p>
-	</div>
-      </div>
+	  </div>
+    </div>
     </section>
     <section class="page-footer">
       <p>SELENE Software - Puertos del Estado - 2019</p>
