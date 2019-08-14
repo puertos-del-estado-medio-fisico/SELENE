@@ -18,7 +18,6 @@ import modules.tidesurge as surge
 import modules.interpolation as inter
 stationid = sys.argv[1]
 initime = time.time()
-#THIS IS A FORK / CHANGE PROPOSITION
 #log
 extralogatt = {'station':stationid}
 logger = logging.getLogger('selene')
