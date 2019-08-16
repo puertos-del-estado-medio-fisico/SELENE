@@ -74,10 +74,12 @@ div#usecases {
     float: left;
 }
 div#usecases p {
-    margin: -1em 2em;
     font-size: small;
     font-style: italic;
     text-align: center;
+    max-width: 640px;
+    display: block;
+    margin: 0 auto;
 }
 div#usecases img {
     display: block;
