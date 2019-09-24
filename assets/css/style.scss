@@ -20,7 +20,9 @@ body {
 }
 .page-header {
     background-color: white;
+    background-origin: border-box;
     background-clip: border-box;
+    background-position-x: center;
     background-image: url(/SELENE/images/IMG_8718_c.jpg);
     background-repeat: no-repeat;
 }
