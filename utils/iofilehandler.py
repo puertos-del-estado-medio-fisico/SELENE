@@ -33,9 +33,9 @@ def txtfile2dataframe(txtfile,separator,datecolumns,datepattern,datacolumn,quali
                     qualityvalue = c.goodqc
             try:
                 datavalue = float(linearray[datacolumn])
+                data.append({'date':dtime.strptime(datestring, datepattern),'data':datavalue,'quality':qualityvalue})
             except (IndexError, ValueError):
-                datavalue = None
-            data.append({'date':dtime.strptime(datestring, datepattern),'data':datavalue,'quality':qualityvalue})
+                logger.info("None or not valid value at " + datestring)
     df = pd.DataFrame(data)
     if not df.empty: 
         df = df.sort_values(by='date', ascending=True)
