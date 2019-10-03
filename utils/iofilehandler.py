@@ -10,7 +10,7 @@ import pandas as pd
 #getDataframe1(file,None,[1,2],'%Y%m%d%H%M%S',3,4)
 #getDataframe2(file,',',[0],'%Y/%m/%d %H:%M',1,None)
 #getDataframe3(file,None,[0,1],'%Y-%m-%d%H:%M:%S',2,3)
-def txtfile2dataframe(txtfile,separator,datecolumns,datepattern,datacolumn,qualitycolumn):
+def txtfile2dataframe(txtfile,separator,datecolumns,datepattern,datacolumn,qualitycolumn,logger):
     data = []
     if not separator:
         separator = None
@@ -33,9 +33,9 @@ def txtfile2dataframe(txtfile,separator,datecolumns,datepattern,datacolumn,quali
                     qualityvalue = c.goodqc
             try:
                 datavalue = float(linearray[datacolumn])
+                data.append({'date':dtime.strptime(datestring, datepattern),'data':datavalue,'quality':qualityvalue})
             except (IndexError, ValueError):
-                datavalue = None
-            data.append({'date':dtime.strptime(datestring, datepattern),'data':datavalue,'quality':qualityvalue})
+                logger.info("None or not valid value at " + datestring)
     df = pd.DataFrame(data)
     if not df.empty: 
         df = df.sort_values(by='date', ascending=True)

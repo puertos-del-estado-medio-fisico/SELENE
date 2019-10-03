@@ -42,7 +42,7 @@ if stationid not in stations:
 try:
     t = time.time()
     #ORIGINAL SAMPLING SEA LEVEL
-    originaldf = iofilehandler.txtfile2dataframe(stations[stationid]['seriesfile'],stations[stationid]['seriesseparator'],list(map(int,stations[stationid]['seriesdatecolumns'].split(','))),stations[stationid]['seriesdateformat'],stations[stationid]['seriesvaluecolumn'],stations[stationid]['seriesqccolumn'])
+    originaldf = iofilehandler.txtfile2dataframe(stations[stationid]['seriesfile'],stations[stationid]['seriesseparator'],list(map(int,stations[stationid]['seriesdatecolumns'].split(','))),stations[stationid]['seriesdateformat'],stations[stationid]['seriesvaluecolumn'],stations[stationid]['seriesqccolumn'],logger)
     if originaldf.empty:
         logger.info('Empty file for station ' + stationid)
         sys.exit()
