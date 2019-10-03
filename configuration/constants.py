@@ -18,7 +18,7 @@ foremanmode = 'EQUI'
 foremanmininterval = 0.1
 foremanhourlyinterval = 1.0
 #configuration and auxiliar files
-configini = '/SELENE/configuration/config.ini'
-stationsfile = '/SELENE/configuration/stations.json'
-foremanastofile = '/SELENE/configuration/auxfiles/astodata'
-pughtaps = '/SELENE/configuration/auxfiles/pughtaps'
+configini = 'configuration/config.ini'
+stationsfile = 'configuration/stations.json'
+foremanastofile = 'configuration/auxfiles/astodata'
+pughtaps = 'configuration/auxfiles/pughtaps'
