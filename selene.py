@@ -9,6 +9,7 @@ import logging
 import configparser
 import json
 import pandas as pd
+import numpy as np
 import configuration.constants as c
 import utils.iofilehandler as iofilehandler
 import utils.dataframe as dataframe
@@ -72,7 +73,12 @@ try:
         logger.debug('TIME to calculate tide surge - tidesurge module: ' + str(time.time() - t) + ' seconds')
         t = time.time()
         #ORIGINAL SAMPLING SURGE WITH FLAGS    
-        tidesurgedfwithflags = qc.qc(tidesurgedf,stations[stationid]['qc_surge_nsigma'],stations[stationid]['qc_surge_winsize'],stations[stationid]['qc_surge_splinedegree'],stations[stationid]['qc_stucklimit'],stations[stationid]['maxsurge'],stations[stationid]['minsurge'],logger,c)
+        tidesurgedfnans = tidesurgedf[np.isnan(tidesurgedf.data)]  # flag nones
+        if not tidesurgedfnans.empty:
+            for ix in tidesurgedfnans.index.values:
+                originaldfwithflags.loc[ix, 'quality'] = c.badqc
+        tidesurgedfnonans = tidesurgedf.dropna(subset=['data'])  # clean none/empty values to apply quality control procedure
+        tidesurgedfwithflags = qc.qc(tidesurgedfnonans,stations[stationid]['qc_surge_nsigma'],stations[stationid]['qc_surge_winsize'],stations[stationid]['qc_surge_splinedegree'],stations[stationid]['qc_stucklimit'],stations[stationid]['maxsurge'],stations[stationid]['minsurge'],logger,c)
         logger.info('TIME to check quality in surge - qc module: ' + str(time.time() - t) + ' seconds')
         t = time.time()
         #Apply flags detected in surge quality control to original series

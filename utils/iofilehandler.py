@@ -26,7 +26,7 @@ def txtfile2dataframe(txtfile,separator,datecolumns,datepattern,datacolumn,quali
                 qualityvalue = c.goodqc
             else:
                 try:
-                    qualityvalue = int(linearray[qualitycolumn])
+                    qualityvalue = int(float(linearray[qualitycolumn]))
                     if qualityvalue == 0:
                         qualityvalue = c.goodqc
                 except (IndexError, ValueError):

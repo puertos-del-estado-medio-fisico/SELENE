@@ -5,6 +5,7 @@ Created on 20 may. 2018
 '''
 #log
 logfile = 'log/selene.log'
+logfilevis = 'log/selenevis.log'
 #quality control flags
 goodqc=1
 badqc=4
