@@ -11,7 +11,7 @@ def plotsubplots(dfs, station):
         plt.subplot(df[3])
         plt.plot(df[0],label=df[1],marker=df[5],linestyle=df[6],linewidth=df[9],ms=df[4],color=df[2])
         plt.legend(loc='upper center', bbox_to_anchor=(0.5, 1.25),  shadow=True, ncol=2)
-        plt.margins(top=0.0)
+        #plt.margins(top=0.0)
         plt.ylabel('Sea level (mm)')
         plt.margins(df[7], df[8])  
     plt.subplots_adjust(hspace=0.4)
@@ -23,7 +23,7 @@ def plot(dfs, text):
     for df in dfs:                                             
         plt.plot(df[0],label=df[1],marker=df[4],linestyle=df[5],ms=df[3],color=df[2])
     plt.legend(loc='upper center', bbox_to_anchor=(0.5, -0.1),  shadow=True, ncol=2)
-    plt.margins(top=0, bottom=1.0)
+    #plt.margins(top=0, bottom=1.0)
     plt.ylabel('Sea level (mm)')
     plt.tight_layout(pad=3.0)
     plt.savefig(text+'.png')
