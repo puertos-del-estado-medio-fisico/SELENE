@@ -28,6 +28,7 @@ body {
 }
 .page-header p {
     margin-bottom: 3%;
+    font-size: 1em;
 }
 div#logopuertos {
     float: right;
@@ -115,6 +116,16 @@ span.code {
 span.python {
     font-family: "Courier New",Courier,"Lucida Sans Typewriter","Lucida Typewriter",monospace;
     color: purple
+}
+.btn {
+    color: #1e6bb8;
+    background-color: rgba(255,255,255,0.6);    
+    border-radius: 0.5rem;
+}
+.btn:hover {
+    color: rgba(255,255,255,0.8);
+    background-color: rgba(30,107,184,0.6);
+    border-radius: 0.5rem;
 }
 @media only screen and (max-width: 900px) {
     body {
